@@ -18,8 +18,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Black header background */
-    color: #fff; /* White text color */
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -86,7 +86,7 @@ body {
 .hero-heading {
     font-size: 4rem;
     margin-bottom: 20px;
-    color: #ff69b4; /* Red heading color */
+    color: #ff69b4; 
 }
 
 .hero-subheading {
@@ -111,8 +111,8 @@ body {
 /* Services section styles */
 .services {
     padding: 80px 20px;
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
+    background-color: #333; 
+    color: #fff; 
 }
 
 .section-heading {
@@ -131,7 +131,7 @@ body {
 }
 
 .service-card {
-    background-color: #222; /* Darker card background color */
+    background-color: #222; 
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -157,14 +157,14 @@ body {
 
 .service-description {
     font-size: 1.1rem;
-    color: #ccc; /* Lighter text color */
+    color: #ccc; 
 }
 
 /* About Us section styles */
 .about-us {
     padding: 80px 20px;
-    background-color: #444; /* Darker background color */
-    color: #fff; /* White text color */
+    background-color: #444; 
+    color: #fff; 
 }
 
 .about-content {
@@ -192,8 +192,8 @@ body {
 /* Gallery section styles */
 .gallery {
     padding: 80px 20px;
-    background-color: #555; /* Dark background color */
-    color: #fff; /* White text color */
+    background-color: #555; 
+    color: #fff; 
 }
 
 .gallery-grid {
@@ -210,8 +210,8 @@ body {
 /* Testimonials section styles */
 .testimonials {
     padding: 80px 20px;
-    background-color: #444; /* Darker background color */
-    color: #fff; /* White text color */
+    background-color: #444;
+    color: #fff; 
 }
 
 .testimonial-container {
@@ -248,8 +248,8 @@ body {
 /* Contact section styles */
 .contact {
     padding: 80px 20px;
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
+    background-color: #333; 
+    color: #fff; 
 }
 
 .contact-form {
@@ -264,8 +264,8 @@ body {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 30px;
-    color: #fff; /* White text color */
-    background-color: #666; /* Darker background color */
+    color: #fff; 
+    background-color: #666; 
 }
 
 .contact-form button {
@@ -281,8 +281,8 @@ body {
 
 /* Footer styles */
 .footer {
-    background-color: #222; /* Darker background color */
-    color: #fff; /* White text color */
+    background-color: #222; 
+    color: #fff; 
     padding: 20px 0;
 }
 
