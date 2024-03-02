@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A BONITA Coiffure</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <img src="logo.jpeg" alt="A BONITA Coiffure">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Startseite</a></li>
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#about">Über Uns</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-heading">Willkommen bei <br>A BONITA Coiffure</h1>
+      <p class="hero-subheading">Ihr Friseursalon für perfekte Schönheit und Stil</p>
+      <a href="#contact" class="btn btn-primary">Jetzt Termin vereinbaren</a>
+    </div>
+  </section>
+  
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-heading">Unsere Leistungen</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-card">
+            <img src="haircut.jpg" alt="Haarschnitt">
+            <h3 class="service-title">Haarschnitt</h3>
+            <p class="service-description">Wir bieten professionelle Haarschnitte für Damen, Herren und Kinder.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-card">
+            <img src="hair-coloring.jpg" alt="Haarfarbe">
+            <h3 class="service-title">Haarfarbe</h3>
+            <p class="service-description">Unsere Experten bieten eine Vielzahl von Haarfärbetechniken an, um Ihren Look zu verbessern.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-card">
+            <img src="styling.jpg" alt="Styling">
+            <h3 class="service-title">Styling</h3>
+            <p class="service-description">Wir verwandeln Ihr Haar in atemberaubende Stylings für besondere Anlässe oder den täglichen Gebrauch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us" id="about">
+    <div class="container">
+      <h2 class="section-heading">Über Uns</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Willkommen bei A BONITA Coiffure! Wir sind ein renommierter Friseursalon, der sich der Schönheit und dem Wohlbefinden unserer Kunden verschrieben hat. Unser talentiertes Team von Stylisten und Stylistinnen steht Ihnen zur Verfügung, um Ihnen die neuesten Frisurentrends und professionelle Haarpflege anzubieten.</p>
+          <p>Wir glauben daran, dass Ihr Besuch in unserem Salon eine entspannende und erfrischende Erfahrung sein sollte. Deshalb legen wir großen Wert auf eine angenehme Atmosphäre und einen erstklassigen Kundenservice. Ihre Zufriedenheit steht bei uns an erster Stelle!</p>
+        </div>
+        <div class="about-image">
+          <img src="about-us.jpg" alt="Über Uns">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-heading">Galerie</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="hero-bg.jpg" alt="Bild 1">
+        </div>
+        <div class="gallery-item">
+          <img src="hero-bg2.jpg" alt="Bild 2">
+        </div>
+        <div class="gallery-item">
+          <img src="styling.jpg" alt="Bild 3">
+        </div>
+        <!-- Add more gallery items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-heading">Kundenbewertungen</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <img src="client1.jpg" alt="Kunde 1">
+          <p class="testimonial-text">Ich bin absolut begeistert von meinem neuen Haarschnitt! Das Team bei A BONITA Coiffure hat fantastische Arbeit geleistet. Ich komme auf jeden Fall wieder!</p>
+          <p class="testimonial-author">- Maria Müller</p>
+        </div>
+        <div class="testimonial">
+          <img src="client2.jpg" alt="Kunde 2">
+          <p class="testimonial-text">Ich hatte eine großartige Erfahrung im Salon. Das Personal war sehr freundlich und professionell. Meine Haare sehen fantastisch aus!</p>
+          <p class="testimonial-author">- Max Mustermann</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-heading">Kontakt</h2>
+      <div class="contact-form">
+        <form id="appointment-form">
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="email" id="email" placeholder="E-Mail" required>
+          <input type="tel" id="phone" placeholder="Telefon" required>
+          <input type="date" id="date" required>
+          <input type="time" id="time" required>
+          <button type="submit">Termin vereinbaren</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+            <path d="M9 21V12H6v-3h3V7.77C9 4.85 10.64 3 14 3c1.15 0 2 .1 2 .1l-.15 3.38s-1.07-.1-2.1-.1c-1.35 0-1.5.63-1.5 1.5V9h3l-.3 3H12v9H9z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"></path>
+          </svg>
+        </a>
+      </div>
+      <p class="copyright">© 2024 A BONITA Coiffure. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
