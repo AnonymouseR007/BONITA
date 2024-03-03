@@ -10,6 +10,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #ff69b4;
 }
 
 /* Header styles */
@@ -281,15 +282,15 @@ body {
 
 /* Location section styles */
 .location {
-    padding: 40px 20px; /* Adjusted padding */
-    background-color: #777; /* Darker background color */
-    color: #fff; /* White text color */
+    padding: 40px 20px; 
+    background-color: #777; 
+    color: #fff; 
 }
 
 .map-container {
     position: relative;
     overflow: hidden;
-    padding-top: 30%; /* Aspect ratio for responsive iframe (3:10) */
+    padding-top: 30%; 
 }
 
 .map-container iframe {
@@ -327,4 +328,16 @@ body {
 
 .social-icons a:last-child {
     margin-right: 0;
+}
+
+/* Add animation classes */
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animated.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
