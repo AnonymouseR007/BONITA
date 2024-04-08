@@ -87,6 +87,14 @@ document.getElementById('appointment-form').addEventListener('submit', async fun
     alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
   }
 });
+// Form validation
+document.getElementById('appointment-form').addEventListener('submit', function(event) {
+  let name = document.getElementById('name').value;
+  if (name.trim() === '') {
+      event.preventDefault();
+      alert('Bitte geben Sie Ihren Namen ein.'); // This is a simple alert; you might want to use a more user-friendly approach
+  }
+});
 
 // Smooth scrolling behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -99,4 +107,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           behavior: 'smooth'
       });
   });
+});
+
+// Function to open the Preisliste Modal
+function openPreislisteModal(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+  document.getElementById("preisliste-modal").classList.remove("hidden");
+}
+
+// Attach event listeners to all elements with the 'preisliste-link' class
+document.querySelectorAll(".preisliste-link").forEach(link => {
+  link.addEventListener("click", openPreislisteModal);
+});
+
+// Close the modal when the close button is clicked
+document.querySelector(".preisliste-modal .close").addEventListener("click", function() {
+  document.getElementById("preisliste-modal").classList.add("hidden");
+});
+
+// Close the modal when clicking outside of it
+window.addEventListener("click", function(event) {
+  var modal = document.getElementById("preisliste-modal");
+  if (event.target == modal) {
+    modal.classList.add("hidden");
+  }
+});
+document.querySelector('.burger').addEventListener('click', function() {
+  this.classList.toggle('toggle');
+  document.querySelector('.nav-menu').classList.toggle('nav-active');
 });

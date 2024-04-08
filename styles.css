@@ -5,14 +5,22 @@
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
 }
+@font-face {
+    font-family: 'ImperialScript';
+    src: url('ImperialScript-Regular.ttf') format('truetype');
+}
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background-color: #3f182b;
+    background-color: #7c2424;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Header styles */
 /* Header styles */
 .header {
     position: fixed;
@@ -51,9 +59,7 @@ body {
     margin-right: 20px;
 }
 
-.nav-menu li:last-child {
-    margin-right: 0;
-}
+
 
 .nav-menu a {
     text-decoration: none;
@@ -63,12 +69,64 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #ff69b4;
+    color: #c72727;
+}
+
+/* Burger menu */
+.burger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.burger.toggle div:nth-child(1) {
+    transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+.burger.toggle div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.toggle div:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -5px);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 60px; /* Adjust according to your header's height */
+        width: 100%;
+        background-color: rgba(53, 53, 53, 0.9); /* Or any color that fits your design */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    /* Show the menu when .nav-active is added */
+    .nav-menu.nav-active {
+        display: flex;
+    }
+    .burger {
+        display: block;
+    }
 }
 
 /* Hero section styles */
 .hero {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg'); /* Gradient overlay */
+    background-image: linear-gradient(to bottom, rgba(247, 214, 171, 0.562), rgba(247, 216, 148, 0.24)), url('hero-bg.jpg'); /* Gradient overlay with light red shades */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -91,7 +149,41 @@ body {
 .hero-heading {
     font-size: 3rem;
     margin-bottom: 10px;
-    color: #ff69b4;
+    color: #ff3333; /* Light red heading color */
+}
+
+.hero-heading-normal {
+    font-family: 'Open Sans', sans-serif; /* Pôvodný font */;
+}
+
+.hero-heading-imperial, .hero-heading-imperial-black {
+    display: block; /* Umožníme individuálne pozicionovanie */
+    margin: 0 auto; /* Centrujeme text */
+    font-family: 'ImperialScript', cursive;
+}
+
+.hero-heading-imperial-black {
+    color: black; /* Čierna farba pre 'Coiffure' a 'Hair & Nails' */
+}
+
+.hero-heading-imperial-black.coiffure {
+    font-size: 2.5rem; /* Veľkosť pre Coiffure */
+    position: relative;
+    padding-top: 1.5rem;
+    left: -7rem; /* Posunutie vľavo, prispôsobte podľa potreby */
+    top: -20px; /* Mierne posunutie nahor pre efekt vrstvenia */
+}
+
+.hero-heading-imperial.abonita {
+    font-size: 5rem; /* Väčšie písmo pre A Bonita */
+    margin: -2rem 0; /* Pridáme medzeru nad a pod */
+}
+
+.hero-heading-imperial-black.hairnails {
+    font-size: 1.8rem; /* Veľkosť pre Hair & Nails */
+    position: relative;
+    left: 4rem; /* Posunutie doprava, prispôsobte podľa potreby */
+    top: 20px; /* Mierne posunutie nadol pre efekt vrstvenia */
 }
 
 .hero-subheading {
@@ -99,10 +191,11 @@ body {
     margin-bottom: 20px;
 }
 
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #ff69b4;
+    background-color: #ff3333; /* Light red button background color */
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -110,10 +203,12 @@ body {
 }
 
 .btn:hover {
-    background-color: #d83a87;
+    background-color: #555; /* Darker shade on hover */
+    color: white;
 }
 
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
     .hero-heading {
         font-size: 2.5rem;
     }
@@ -121,9 +216,26 @@ body {
     .hero-subheading {
         font-size: 1.2rem;
     }
+  
+    /* Additional adjustments for small devices */
+    .hero-heading-imperial-black.coiffure {
+        font-size: 1.8rem; /* Adjusted size for Coiffure */
+        left: -4rem; /* Adjusted left positioning */
+    }
+
+    .hero-heading-imperial.abonita {
+        font-size: 3.5rem; /* Adjusted size for A Bonita */
+        margin: -1.8rem 0; /* Adjusted margin */
+    }
+
+    .hero-heading-imperial-black.hairnails {
+        font-size: 1.1rem; /* Adjusted size for Hair & Nails */
+        left: 2rem; /* Adjusted left positioning */
+        top: 0px; /* Adjusted top positioning */
+    }
 }
 
- 
+
 /* Services section styles */
 .services {
     padding: 80px 20px;
@@ -176,6 +288,11 @@ body {
     color: #ccc; 
 }
 
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Changes the grid to a single column on small screens */
+    }
+}
 /* About Us section styles */
 .about-us {
     padding: 80px 20px;
@@ -226,7 +343,7 @@ body {
 /* Testimonials section styles */
 .testimonials {
     padding: 80px 20px;
-    background-color: #444;
+    background-color: #555;
     color: #fff; 
 }
 
@@ -264,7 +381,7 @@ body {
 /* Contact section styles */
 .contact {
     padding: 80px 20px;
-    background-color: #333; 
+    background-color: #444; 
     color: #fff; 
 }
 
@@ -274,6 +391,7 @@ body {
 }
 
 .contact-form input,
+.contact-form textarea, /* Pridanie štýlov pre textarea */
 .contact-form button {
     width: 100%;
     padding: 12px;
@@ -282,6 +400,13 @@ body {
     border-radius: 30px;
     color: #fff; 
     background-color: #666; 
+    outline: none; /* Odstránenie outline pri focus */
+}
+
+/* Špecifické štýly pre textarea, prípadne prispôsobenie paddingu alebo výšky */
+.contact-form textarea {
+    resize: vertical; /* Umožnenie zmeny veľkosti iba vertikálne */
+    min-height: 120px; /* Minimálna výška */
 }
 
 .contact-form button {
@@ -317,33 +442,187 @@ body {
     border: none;
 }
 
+/* General Modal Styles */
+.preisliste-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 1000; /* Ensures the modal is above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+.preisliste-content {
+    position: relative; /* Relative for positioning elements inside */
+    background-color: #fff; /* Modal background color */
+    margin: 20px;
+    padding: 20px 40px 20px 20px; /* Adjusted padding to accommodate the close button */
+    border-radius: 8px; /* Rounded corners for the modal */
+    width: auto;
+    max-width: 600px; /* Maximum width of the modal content */
+    height: auto;
+    max-height: 80vh; /* Maximum height based on the viewport height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Shadow for depth */
+}
+
+/* Sticky Close Button Styles */
+.close {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Align to the top edge of the modal */
+    float: right; /* Float right to stick to the right */
+    background-color: #fff; /* Background to make it stand out from the content */
+    border-radius: 50%; /* Circular shape */
+    width: 30px; /* Width of the close button */
+    height: 30px; /* Height of the close button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; /* Above the modal content */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow for the button for better visibility */
+    right: 0px; /* Adjust this value to position the close button from the right edge of the modal */
+}
+
+/* Additional styling for the close icon, if you use an icon font like FontAwesome, adjust as necessary */
+.close:before {
+    content: '\00d7'; /* Unicode character for "X" */
+    font-size: 24px;
+    color: #333;
+}
+
+/* Preisliste Section Styles */
+.preisliste-section h3 {
+    color: #333; /* Section title color */
+    margin-top: 20px;
+}
+
+.preisliste-section p {
+    margin-left: 20px; /* Indent items for better readability */
+    line-height: 1.6; /* Line height for readability */
+    color: #666; /* Text color */
+}
+
+/* Display the modal when it's active */
+.preisliste-modal:not(.hidden) {
+    visibility: visible;
+    opacity: 1;
+}
+
+.social-sticky {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Slightly larger gap for visual separation */
+    z-index: 1000; /* Ensure it stays above all other content */
+  }
+  
+  .social-sticky a {
+    color: #ffffff; /* Use a color that fits your scheme */
+    background-color: #E1306C; /* Instagram pink for both, can adjust per icon if desired */
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .social-sticky a:hover {
+    transform: translateY(-3px); /* Subtle hover effect */
+    background-color: #C13584; /* Slightly darker on hover */
+  }
+  
+  .social-sticky a i {
+    font-size: 24px; /* Larger icon size for visibility */
+  }
+  
+
 /* Footer styles */
 .footer {
-    background-color: #222; 
-    color: #fff; 
-    padding: 20px 0;
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
 }
 
 .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.social-icons a {
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.footer-links {
+    margin-right: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-links ul li a {
     color: #fff;
-    font-size: 24px;
-    margin: 0 10px;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: #ff69b4;
+.footer-links ul li a:hover {
+    color: #ff3333;
 }
 
-.social-icons a:last-child {
-    margin-right: 0;
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
 }
+
+.footer-social p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-social p span {
+    color: #ff69b4;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
 
 /* Add animation classes */
 .animated {
@@ -356,3 +635,4 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+

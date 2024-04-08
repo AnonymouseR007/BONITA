@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coiffure A Bonita - Ihr Friseursalon für perfekte Schönheit und Stil">
+  <meta name="keywords" content="Friseur, Haarschnitt, Haarfarbe, Styling">
   <title>Coiffure A Bonita</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
@@ -14,19 +15,29 @@
       <div class="logo">
         <img src="logo.jpeg" alt="A BONITA Coiffure">
       </div>
-      <ul class="nav-menu">
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <ul class="nav-menu">
         <li><a href="#home">Startseite</a></li>
         <li><a href="#services">Leistungen</a></li>
         <li><a href="#about">Über Uns</a></li>
-        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#" class="preisliste-link">Preisliste</a></li>
         <li><a href="#contact">Kontakt</a></li>
-      </ul>
+    </ul>
     </nav>
   </header>
   
   <section class="hero animated" id="home">
     <div class="hero-content">
-      <h1 class="hero-heading">Willkommen bei <br>Coiffure A Bonita</h1>
+      <h1 class="hero-heading">
+        <span class="hero-heading-normal">Willkommen bei <br></span>
+        <span class="hero-heading-imperial-black coiffure">Coiffure</span>
+        <span class="hero-heading-imperial abonita">A Bonita</span>
+        <span class="hero-heading-imperial-black hairnails">Hair & Nails</span>
+    </h1>
       <p class="hero-subheading">Ihr Friseursalon für perfekte Schönheit und Stil</p>
       <a href="#contact" class="btn btn-primary">Jetzt Termin vereinbaren</a>
     </div>
@@ -57,6 +68,32 @@
             <p class="service-description">Wir verwandeln Ihr Haar in atemberaubende Stylings für besondere Anlässe oder den täglichen Gebrauch.</p>
           </div>
         </div>
+        <!-- Keratinbehandlung -->
+<div class="service-item">
+  <div class="service-card">
+    <img src="haircut.jpg" alt="Keratinbehandlung">
+    <h3 class="service-title">Keratinbehandlung</h3>
+    <p class="service-description">Erleben Sie glattes, frizz-freies Haar mit unserer professionellen Keratinbehandlung.</p>
+  </div>
+</div>
+
+<!-- Kosmetik -->
+<div class="service-item">
+  <div class="service-card">
+    <img src="haircut.jpg" alt="Kosmetik">
+    <h3 class="service-title">Kosmetik</h3>
+    <p class="service-description">Unser Angebot umfasst Gesichtsbehandlungen, Make-up, Waxing und mehr für Ihr Wohlbefinden.</p>
+  </div>
+</div>
+
+<!-- Nails -->
+<div class="service-item">
+  <div class="service-card">
+    <img src="haircut.jpg" alt="Nails">
+    <h3 class="service-title">Nails</h3>
+    <p class="service-description">Von Maniküre bis Pediküre – genießen Sie das komplette Programm für gepflegte Hände und Füße.</p>
+  </div>
+</div>
       </div>
     </div>
   </section>
@@ -76,7 +113,7 @@
     </div>
   </section>
   
-  <section class="gallery animated" id="gallery">
+  <!--<section class="gallery animated" id="gallery">
     <div class="container">
       <h2 class="section-heading">Galerie</h2>
       <div class="gallery-grid">
@@ -91,7 +128,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
 
   <section class="testimonials animated" id="testimonials">
     <div class="container">
@@ -121,6 +158,7 @@
           <input type="tel" id="phone" placeholder="Telefon" required>
           <input type="date" id="date" required>
           <input type="time" id="time" required>
+          <textarea id="message" placeholder="Nachricht" required></textarea>
           <button type="submit">Termin vereinbaren</button>
         </form>
       </div>
@@ -134,25 +172,152 @@
         </div>
     </div>
 </section>
-  
-  <footer class="footer">
-    <div class="container">
-      <div class="social-icons">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-            <path d="M9 21V12H6v-3h3V7.77C9 4.85 10.64 3 14 3c1.15 0 2 .1 2 .1l-.15 3.38s-1.07-.1-2.1-.1c-1.35 0-1.5.63-1.5 1.5V9h3l-.3 3H12v9H9z"/>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"></path>
-          </svg>
-        </a>
+
+<!-- Preisliste Modal Structure -->
+<div id="preisliste-modal" class="preisliste-modal hidden">
+  <div class="preisliste-content">
+    <span class="close"></span>
+      <h2>Preisliste</h2>
+      <div class="preisliste-section">
+          <h3>Waschen & Föhnen</h3>
+          <p>Waschen & Föhnen lang - CHF 60.00</p>
+          <p>Waschen & Föhnen medium - CHF 40.00</p>
+          <p>Waschen & Föhnen kurz - CHF 30.00</p>
+          <p>Hand föhnen - CHF 20.00</p>
       </div>
-      <p class="copyright">© 2024 Coiffure A Bonita. Alle Rechte vorbehalten.</p>
-    </div>
-  </footer>
+      <div class="preisliste-section">
+          <h3>Make-up</h3>
+          <p>Make-up Tag - CHF 47.00</p>
+          <p>Make-up Abend - CHF 77.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Kosmetik</h3>
+          <p>Gesichtsreinigung normal - CHF 65.00</p>
+          <p>Máscara Gold - CHF 10.00</p>
+          <p>Microneedling - CHF 130.00</p>
+          <p>Brasilian Waxing Intimbereich - CHF 50.00</p>
+          <p>Achseln Waxing - CHF 20.00</p>
+          <p>Ober- Unterbeine Waxing - CHF 40.00</p>
+          <p>Ober- Unterarm waxing - CHF 30.00</p>
+          <p>Oberelippen Waxing - CHF 10.00</p>
+          <p>Ganzes Geschicht Waxing - CHF 45.00</p>
+          <p>Bikini Linie - CHF 30.00</p>
+          <p>Bikini Komplett - CHF 50.00</p>
+          <p>Rücken oder Brust Herren - CHF 40.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Keratin Portier</h3>
+          <p>Kurz ink. Waschen&Fohnen - CHF 150.00</p>
+          <p>Mittel ink. Waschen&Fohnen - CHF 180.00</p>
+          <p>Lang ink. Waschen&Fohnen - CHF 200.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Nails</h3>
+          <p>Manicure shellac - CHF 50.00</p>
+          <p>Neu set gel - CHF 85.00</p>
+          <p>Pedicure shellac - CHF 60.00</p>
+          <p>Pedicure normal - CHF 50.00</p>
+          <p>Pedicure gel - CHF 70.00</p>
+          <p>Ausfüllen gel - CHF 60.00</p>
+          <p>Manicure normal - CHF 30.00</p>
+          <p>French Nails Gel - CHF 65.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Behandlung Nutrition</h3>
+          <p>Kurz - CHF 75.00</p>
+          <p>Médio - CHF 95.00</p>
+          <p>Longo - CHF 115.00</p>
+          <p>Extra longo - CHF 135.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Behandlung Wiederaufbau</h3>
+          <p>Reconstrução médio (lavar e secar) - CHF 75.00</p>
+          <p>Reconstrução longo (lavar e secar) - CHF 85.00</p>
+          <p>Reconstrução extra longo (lavar e secar) - CHF 105.00</p>
+          <p>Reconstrução kurz (lavar e secar) - CHF 65.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Keratin Haarbehandlung Vegan</h3>
+          <p>Keratin Vegan Medium - CHF 205.00</p>
+          <p>Keratin Behandlung Lang - CHF 245.00</p>
+          <p>Anzatz Behandlung kurz - CHF 125.00</p>
+          <p>Anzatz Behandlung Medium - CHF 175.00</p>
+          <p>Anzatz Behandlung Lang - CHF 225.00</p>
+          <p>Keratin Behandlung Kurz - CHF 165.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Hochsteckfrisur</h3>
+          <p>Hochstecken Frisur 1Std - CHF 100.00</p>
+          <p>Hochstecken Frisur 30min - CHF 50.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Brasilianische Haarversiegelung</h3>
+          <p>Haarversiegelung Kurz - CHF 135.00</p>
+          <p>Haarversiegelung Mittellang - CHF 155.00</p>
+          <p>Haarversiegelung Lang - CHF 185.00</p>
+          <p>Haarversiegelung Extralang - CHF 205.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Haar Strähnen</h3>
+          <p>Strähnen Kurz ink. Waschen&Fohnen - CHF 120.00</p>
+          <p>Strähnen Lang ink. Waschen&Fohnen - CHF 180.00</p>
+          <p>Strähnen Medium ink. Waschen&Fohnen - CHF 150.00</p>
+          <p>2 Farben Strähnen dazu - CHF 38.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Haarschnitt</h3>
+          <p>Herren Haarschnitt ink. Waschen&Fohnen - CHF 35.00</p>
+          <p>Dame Haarschnitt exkl. Waschen&Föhnen - CHF 45.00</p>
+          <p>Kinder Haarschnitt - CHF 25.00</p>
+          <p>Mädchen Haarschnitt ink. Waschen&Fönen - CHF 35.00</p>
+          <p>Bueb Haarschnitt exkl. Waschen&Föhnen - CHF 30.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>Behandlung Feuchtigkeitsspender</h3>
+          <p>Tiefe Behandlung lang (lavar e escovar) - CHF 95.00</p>
+          <p>Tiefe Behandlung kurz (lavar e escovar) - CHF 55.00</p>
+          <p>Tiefe Behandlung Mittel (lavar e escovar) - CHF 75.00</p>
+      </div>
+      <div class="preisliste-section">
+          <h3>MASCARA Haarfärbung</h3>
+          <p>Farbe Kurz - CHF 58.00</p>
+          <p>Farbe Mittellang - CHF 68.00</p>
+          <p>Farbe Lang - CHF 78.00</p>
+          <p>Nur Ansatz - CHF 39.00</p>
+      </div>
+  </div>
+</div>
+<div class="social-sticky">
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+  
+<footer class="footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-logo">
+              <img src="logo.jpeg" alt="A BONITA Coiffure">
+          </div>
+          <div class="footer-links">
+              <ul>
+                  <li><a href="#home">Startseite</a></li>
+                  <li><a href="#services">Leistungen</a></li>
+                  <li><a href="#about">Über Uns</a></li>
+                  <li><a href="#" class="preisliste-link">Preisliste</a></li>
+                  <!--<li><a href="#gallery">Galerie</a></li>-->
+                  <li><a href="#contact">Kontakt</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="copyright">
+          <p>&copy; 2024 A BONITA Coiffure. Alle Rechte vorbehalten.</p>
+      </div>
+  </div>
+</footer>
   
   <script src="script.js"></script>
 </body>
